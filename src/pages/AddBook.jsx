@@ -17,7 +17,7 @@ export default function AddBook() {
     e.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      await axios.post("http://localhost:5000/api/books", book, {
+      await axios.post("https://bookreviewplatform-backend-1z1c.onrender.com/api/books", book, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Book added successfully!");
@@ -73,3 +73,4 @@ export default function AddBook() {
     </div>
   );
 }
+
