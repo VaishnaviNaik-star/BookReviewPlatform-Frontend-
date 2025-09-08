@@ -10,7 +10,7 @@ export default function BookDetails() {
   const [reviews, setReviews] = useState([]);
 
   const fetchData = async () => {
-    const res = await axios.get(`http://localhost:5000/api/books/${id}`);
+    const res = await axios.get(`https://bookreviewplatform-backend-1z1c.onrender.com/api/books/${id}`);
     setBook(res.data.book);
     setReviews(res.data.reviews);
   };
@@ -52,3 +52,4 @@ export default function BookDetails() {
     </Container>
   );
 }
+
