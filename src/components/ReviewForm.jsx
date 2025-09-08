@@ -11,7 +11,7 @@ export default function ReviewForm({ bookId, refreshReviews }) {
     if (!token) return alert("Please login to add a review");
 
     await axios.post(
-      "http://localhost:5000/api/reviews",
+      "https://bookreviewplatform-backend-1z1c.onrender.com/api/reviews",
       { bookId, rating, comment },
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -36,3 +36,4 @@ export default function ReviewForm({ bookId, refreshReviews }) {
     </Box>
   );
 }
+
