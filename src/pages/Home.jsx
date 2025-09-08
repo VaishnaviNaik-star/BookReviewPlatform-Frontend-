@@ -8,7 +8,7 @@ export default function Home() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/books").then(res => setBooks(res.data));
+    axios.get("https://bookreviewplatform-backend-1z1c.onrender.com/api/books").then(res => setBooks(res.data));
   }, []);
 
   const filteredBooks = books.filter(
@@ -31,3 +31,4 @@ export default function Home() {
     </Container>
   );
 }
+
